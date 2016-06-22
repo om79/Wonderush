@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_dark"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello again"
+            android:id="@+id/signup4screen_textview_text1"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginscreen_edittext_email"
+            android:background="@drawable/style_rectangle_edittext_new"
+            android:hint="E-mail Address"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@android:color/black"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable= "@null"
+            android:layout_marginBottom="5dp"
+            android:padding="14dp"
+            android:textSize="17sp" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginscreen_edittext_password"
+
+            android:background="@drawable/style_rectangle_edittext_new"
+            android:hint="Password"
+            android:textColorHint="@android:color/black"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable= "@null"
+            android:layout_marginBottom="5dp"
+            android:padding="14dp"
+            android:textSize="17sp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:id="@+id/loginscreen_button_login"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:background="@color/head_pink"
+            android:layout_marginBottom="75dp"
+            android:padding="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:id="@+id/loginscreen_text_forget"
+            android:gravity="center"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</RelativeLayout>

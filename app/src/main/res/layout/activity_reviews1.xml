@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.programize.wonderush.Activities.Reviews.Reviews1"
+    android:background="@color/pink2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/head_pink"
+        android:gravity="center"
+        android:id="@+id/reviewscreen_linear_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews"
+            android:id="@+id/reviewscreen_textview_head"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/reviewscreen_imageview_backarrow"
+        android:layout_below="@+id/reviewscreen_linear_head"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginTop="-45dp"
+        android:padding="12dp" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/reviewscreen_imageview_social"
+        android:layout_below="@+id/reviewscreen_linear_head"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="-45dp"
+        android:padding="12dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/reviewscreen_recycler_reviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/reviewscreen_linear_head"
+        android:layout_alignParentBottom="true" />
+
+
+
+</RelativeLayout>

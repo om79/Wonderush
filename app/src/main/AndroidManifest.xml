@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.programize.wonderush">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- GCM -->
+    <permission
+        android:name="com.programize.wonderush.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.programize.wonderush.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Permission to use camera - required -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Camera features - recommended -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application
+        android:name=".Activities.InitializeActivity"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activities.SplashNew"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_splash"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="splash"
+                    android:scheme="wonderush" />
+            </intent-filter>
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".Activities.SplashNew" -->
+        <!-- android:hardwareAccelerated="true" -->
+        <!-- android:label="@string/title_activity_sing_up_intro" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".Activities.SignUp.SignUpIntro"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_sing_up_intro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LoginScreen"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait">
+            <intent-filter android:label="test label">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <!-- <data android:scheme="http" -->
+                <!-- android:host="www.example.com" -->
+                <!-- android:pathPrefix="/gizmos" /> -->
+                <!-- note that the leading "/" is required for pathPrefix -->
+                <!-- Accepts URIs that begin with "example://gizmos” -->
+                <data
+                    android:host="login"
+                    android:scheme="wonderush" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.SignUp.SignUp1"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_sign_up1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SignUp.SignUp2"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_sign_up2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SignUp.SignUp2b"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_sign_up2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SignUp.SignUp3"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_sign_up3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SignUp.SignUp4"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Settings.Settings1"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_settings1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Browsing.Browse"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_browse"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Browsing.Listings"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_listings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Profile.Profile1"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_profile1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Booking.Tickets"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_booking1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Reviews.Reviews1"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_reviews1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Browsing.Badges"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_badges"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Browsing.Experience"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_experience1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Booking.Booking"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_booking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Browsing.Buckets"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Browsing.Badge"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Settings.Billing1"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Settings.Billing2"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Settings.Invite"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ForgotPassword"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <!-- Activities responsible for gathering payment info -->
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Activities.Browsing.MapsActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+
+        <!-- FACEBOOK -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider529473487215696"
+            android:exported="true" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="b8728bd57a4cb998167e57546b2840d4d93755f4" />
+
+        <receiver
+            android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.programize.wonderush" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

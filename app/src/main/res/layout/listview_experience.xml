@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:layout_collapseMode="pin">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/blue_dark"
+        android:id="@+id/experiencescreen_relative_headimage">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/experiencescreen_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/style_gradientcolor"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/experiencescreen_text_count"
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"
+            android:layout_toLeftOf="@+id/experiencescreen_text_count">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/experiencescreen_textview_eventname"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:id="@+id/experiencescreen_image_location"
+                    android:src="@drawable/icon_location"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/experiencescreen_textview_locationname"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:id="@+id/experiencescreen_image_calendar"
+                    android:src="@drawable/icon_calendar"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/experiencescreen_textview_calendar"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:textColor="#ffffff"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/experiencescreen_image_type"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/experiencescreen_image_bucket"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/experiencescreen_text_count"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/experiencescreen_relative_headimage"
+        android:layout_centerHorizontal="true"
+        android:background="#d12b54"
+        android:id="@+id/experiencescreen_linear_rating"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/experiencescreen_text_rating"
+            android:textSize="19sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/experiencescreen_image_star5"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/experiencescreen_image_star4"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/experiencescreen_image_star5"
+            android:layout_toStartOf="@+id/experiencescreen_image_star5"
+            android:layout_marginLeft="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/experiencescreen_image_star3"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/experiencescreen_image_star4"
+            android:layout_toStartOf="@+id/experiencescreen_image_star4"
+            android:layout_marginLeft="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/experiencescreen_image_star2"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/experiencescreen_image_star3"
+            android:layout_toStartOf="@+id/experiencescreen_image_star3"
+            android:layout_marginLeft="3dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/experiencescreen_image_star1"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/experiencescreen_image_star2"
+            android:layout_toStartOf="@+id/experiencescreen_image_star2"
+            android:layout_marginLeft="3dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

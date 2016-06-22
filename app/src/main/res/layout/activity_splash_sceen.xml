@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SplashSceen"
+    android:background="@color/pink1">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/splashscreen_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/splashscreen_layout_linear"
+        android:visibility="gone"/>
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splashscreen_video"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/splashscreen_layout_linear"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:id="@+id/splashscreen_image_wonderush"
+        android:contentDescription="wonderush icon"
+        android:src="@drawable/wonderush_small"
+        android:layout_below="@+id/splashscreen_layout_linear_dots"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/splashscreen_layout_linear">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/login"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:id="@+id/splashscreen_button_login"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/signup"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:id="@+id/splashscreen_button_signup"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splashscreen_layout_linear_dots"
+        android:layout_above="@+id/splashscreen_layout_linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:id="@+id/splashscreen_image_dot1"
+            android:src="@drawable/icon_dot_filled1"/>
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:id="@+id/splashscreen_image_dot2"
+            android:src="@drawable/icon_dot_unfilled1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:id="@+id/splashscreen_image_dot3"
+            android:src="@drawable/icon_dot_unfilled1"/>
+    </LinearLayout>
+</RelativeLayout>

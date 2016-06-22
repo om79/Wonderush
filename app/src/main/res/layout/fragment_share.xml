@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/pink3"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/fragment_share_image_whats_up"
+        android:src="@drawable/share_whats_up"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="5dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/fragment_share_image_facebook"
+        android:src="@drawable/share_facebook"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="5dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/fragment_share_image_twitter"
+        android:src="@drawable/share_twitter"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="5dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/fragment_share_image_mail"
+        android:src="@drawable/share_mail"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:padding="5dp" />
+</LinearLayout>

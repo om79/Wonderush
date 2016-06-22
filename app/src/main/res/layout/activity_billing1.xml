@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.programize.wonderush.Activities.Settings.Billing1"
+    android:background="@color/blue_dark">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/head_pink"
+        android:id="@+id/billing1screen_linear_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/billing1screen_textview_head"
+            android:text="Billing"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:contentDescription="@string/content_description_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/billing1screen_imageview_backarrow"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/icon_arrow_back"
+            android:padding="12dp"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/billing1screen_view_line1"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/billing1screen_view_divider1"
+        android:background="@android:color/white"
+        android:layout_below="@+id/billing1screen_linear_head"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:text="CANCEL SUBSCRIPTION"
+        android:textSize="18sp"
+        android:id="@+id/billing1screen_text_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@color/pink3"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip this step"
+        android:id="@+id/billing1screen_text_skip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a payment method now to\nstart your month's subscription."
+        android:textSize="20sp"
+        android:textColor="@color/white2"
+        android:id="@+id/billing1screen_textview_1"
+        android:layout_below="@+id/billing1screen_view_divider1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/billing1screen_textview_1"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/billing1screen_linear_credit"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Credit/Debit Card"
+            android:id="@+id/billing1screen_textview_2"
+            android:background="@color/head_pink"
+            android:textColor="@color/white2"
+            android:padding="25dp"
+            android:textSize="18sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You can add or edit your payment methods and cancel your subscription at any time in the billing section of settings."
+        android:id="@+id/billing1screen_textview_3"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_below="@+id/billing1screen_linear_credit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"/>
+
+
+</RelativeLayout>

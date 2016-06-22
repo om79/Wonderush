@@ -1,0 +1,330 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.programize.wonderush.Activities.Settings.Settings1"
+    android:background="@color/blue_dark">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/head_pink"
+        android:gravity="center"
+        android:id="@+id/settings1screen_linear_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:id="@+id/settings1screen_textview_head"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/settings1screen_view_divider1"
+        android:background="@android:color/white"
+        android:layout_below="@+id/settings1screen_linear_head"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/settings1screen_view_divider1"
+        android:id="@+id/settings1screen_scroll"
+        android:layout_above="@+id/settings1screen_button_logout"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:id="@+id/settings1screen_linear_notifications"
+                android:paddingLeft="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Notifications"
+                    android:id="@+id/settings1screen_textview_notifications"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:gravity="fill_vertical" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Receive Push Notifications"
+                        android:id="@+id/settings1screen_textview_receivenotifications"
+                        android:textSize="17sp"
+                        android:textColor="#ffffff"
+                        android:gravity="fill_vertical" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ToggleButton
+                            android:layout_width="50dp"
+                            android:layout_height="28dp"
+                            android:id="@+id/settings1screen_swich_notifications"
+                            android:textOff=""
+                            android:textOn=""
+                            android:background="@drawable/swich"
+                            android:checked="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/settings1screen_view_divider2"
+                android:background="@color/pink3"
+                android:layout_below="@+id/settings1screen_linear_notifications"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings1screen_view_divider2"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/settings1screen_linear_social"
+                android:paddingLeft="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invite Your Friends"
+                        android:id="@+id/settings1screen_text_invite"
+                        android:textSize="17sp"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/settings1screen_image_invite"
+                        android:src="@drawable/icon_arrow_front"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="5dp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/settings1screen_view_divider3"
+                android:background="@color/pink3"
+                android:layout_below="@+id/settings1screen_linear_social"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings1screen_view_divider3"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/settings1screen_linear_billing">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Billing"
+                    android:id="@+id/settings1screen_textview_billing"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:gravity="fill_vertical"
+                    android:paddingLeft="30dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add/Edit Billing Details"
+                        android:id="@+id/settings1screen_text_billingDetails"
+                        android:textSize="17sp"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/settings1screen_image_billingDetails"
+                        android:src="@drawable/icon_arrow_front"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="5dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/settings1screen_view_divider4"
+                android:background="@color/pink3"
+                android:layout_below="@+id/settings1screen_linear_billing"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/settings1screen_view_divider4"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/settings1screen_linear_about">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="About"
+                        android:id="@+id/settings1screen_textview_about"
+                        android:textSize="14sp"
+                        android:textColor="#ffffff"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="30dp"
+                        android:text="Terms &amp; Conditions"
+                        android:id="@+id/settings1screen_textview_terms"
+                        android:textSize="14sp"
+                        android:textColor="#ffffff"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="30dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Privacy Policy"
+                        android:id="@+id/settings1screen_textview_policy"
+                        android:textSize="14sp"
+                        android:textColor="#ffffff"
+                        android:paddingLeft="0dp"
+                        android:gravity="fill_vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="30dp"
+                        android:text="Support"
+                        android:id="@+id/settings1screen_textview_support"
+                        android:textSize="14sp"
+                        android:textColor="#ffffff"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="Report a bug"
+                        android:id="@+id/settings1screen_textview_bug"
+                        android:textSize="14sp"
+                        android:textColor="#ffffff"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="0dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/settings1screen_view_divider5"
+                android:background="@color/pink3"
+                android:layout_below="@+id/settings1screen_linear_about"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/settings1screen_linear_version"
+                android:layout_alignLeft="@+id/settings1screen_view_divider5"
+                android:layout_alignStart="@+id/settings1screen_view_divider5"
+                android:layout_below="@+id/settings1screen_linear_about"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/version"
+                    android:id="@+id/settings1screen_textview_version"
+                    android:textSize="10sp"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:id="@+id/settings1screen_button_logout"
+        android:background="@drawable/rectangle2"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

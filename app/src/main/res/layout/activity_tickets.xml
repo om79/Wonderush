@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.programize.wonderush.Activities.Booking.Tickets"
+    android:background="@color/blue_dark">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/head_pink"
+        android:gravity="center"
+        android:id="@+id/ticketscreen_linear_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bookings"
+            android:id="@+id/ticketscreen_textview_head"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/ticketscreen_imageview_backarrow"
+        android:layout_below="@+id/ticketscreen_linear_head"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginTop="-45dp"
+        android:padding="10dp" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/ticketscreen_imageview_social"
+        android:layout_below="@+id/ticketscreen_linear_head"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="-45dp"
+        android:padding="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/ticketscreen_view_divider1"
+        android:background="@color/white"
+        android:layout_below="@+id/ticketscreen_linear_head"
+        android:layout_alignRight="@+id/ticketscreen_imageview_social"
+        android:layout_alignEnd="@+id/ticketscreen_imageview_social"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/ticketscreen_linear_options"
+        android:layout_below="@+id/ticketscreen_view_divider1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="UPCOMING"
+            android:id="@+id/ticketscreen_textview_upcoming"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/pink1"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="PREVIOUS"
+            android:id="@+id/ticketscreen_textview_previous"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/pink1"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/ticketscreen_recycler_booking_upcoming"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scrollbars="horizontal"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_below="@+id/ticketscreen_linear_options"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ticketscreen_viewpager_upcoming"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/ticketscreen_linear_options"
+        android:layout_marginTop="15dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ticketscreen_viewpager_previous"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/ticketscreen_linear_options"
+        android:layout_marginTop="15dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ticketscreen_linear_options"
+        android:id="@+id/ticketscreen_rl_browse"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BROWSE"
+            android:id="@+id/ticketscreen_text_browse"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:background="@color/pink1"
+            android:padding="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We can totally help you change that though."
+            android:id="@+id/ticketscreen_text_nobook2"
+            android:layout_above="@+id/ticketscreen_text_browse"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You haven&apos;t booked anything just yet."
+            android:id="@+id/ticketscreen_text_nobook1"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_above="@+id/ticketscreen_text_nobook2"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

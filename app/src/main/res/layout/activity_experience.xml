@@ -1,0 +1,209 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white2"
+    tools:context="com.programize.wonderush.Activities.Browsing.Experience">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/head_pink"
+        android:id="@+id/experiencescreen_linear_head"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/experiencescreen_textview_head"
+            android:textSize="16sp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/experiencescreen_imageview_social"
+            android:layout_toStartOf="@+id/experiencescreen_imageview_social"
+            android:layout_toRightOf="@+id/experiencescreen_imageview_backarrow"
+            android:layout_toEndOf="@+id/experiencescreen_imageview_backarrow"
+            android:gravity="center" />
+
+        <ImageView
+            android:contentDescription="@string/content_description_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/experiencescreen_imageview_social"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:padding="12dp"
+            android:src="@drawable/icon_share"/>
+
+        <ImageView
+            android:contentDescription="@string/content_description_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/experiencescreen_imageview_backarrow"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:padding="12dp"
+            android:src="@drawable/icon_arrow_back"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/experiencescreen_scrollview"
+            android:layout_centerHorizontal="true"
+            android:fillViewport="false"
+            android:layout_below="@+id/experiencescreen_linear_head"
+            android:layout_above="@+id/experiencescreen_relative_review">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/listview_experience" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/experiencescreen_text_description"
+                    android:textColor="@android:color/black"
+                    android:background="@color/white"
+                    android:padding="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp">
+
+                    <!--<com.google.android.gms.maps.MapView-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="200dp"-->
+                        <!--android:id="@+id/experiencescreen_map_small"-->
+                        <!--android:visibility="gone"/>-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:id="@+id/experiencescreen_map_outer"
+                        android:visibility="invisible">
+                        <fragment
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:id="@+id/experiencescreen_map_small"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:background="#33000000"
+                        android:id="@+id/experiencescreen_view_map">
+                    </View>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/my_shadow">
+                    </View>
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/icon_expand"
+                        android:layout_margin="20dp"
+                        android:id="@+id/experiencescreen_image_expand"/>
+
+                </RelativeLayout>
+
+                <com.programize.wonderush.Utilities.Functions.myViewpager
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/experiencescreen_viewpager_reviews"/>
+
+                <TextView
+                    android:id="@+id/experiencescreen_text_review2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:text="Be the first to leave a review"
+                    android:textSize="19sp"
+                    android:textColor="@color/white"
+                    android:padding="20dp"
+                    android:background="#d12b54"
+                    android:gravity="center"
+                    android:visibility="gone"/>
+
+                <!--<fragment-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="300dp"-->
+                    <!--android:id="@+id/experiencescreen_map_small"-->
+                    <!--android:name="com.google.android.gms.maps.SupportMapFragment" />-->
+
+            </LinearLayout>
+        </ScrollView >
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/experiencescreen_relative_review"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"
+        android:background="@drawable/style_gradientcolor_profile">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY"
+            android:id="@+id/experiencescreen_image_review" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/experiencescreen_text_review"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="LEAVE A REVIEW" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/experiencescreen_relative_booking"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/style_gradientcolor_profile">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/experiencescreen_text_booking"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

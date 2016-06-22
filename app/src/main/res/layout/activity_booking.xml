@@ -1,0 +1,371 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.programize.wonderush.Activities.Booking.Booking"
+    android:background="#ff355d">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/head_pink"
+        android:gravity="center"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        android:id="@+id/bookingscreen_linear_head">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bookingscreen_textview_head"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <ImageView
+        android:contentDescription="@string/content_description_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/bookingscreen_imageview_backarrow"
+        android:layout_below="@+id/bookingscreen_linear_head"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginTop="-45dp"
+        android:padding="10dp"
+        android:src="@drawable/icon_arrow_back"/>
+
+    <ImageView
+        android:contentDescription="@string/content_description_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/bookingscreen_imageview_social"
+        android:layout_below="@+id/bookingscreen_linear_head"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="-45dp"
+        android:padding="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bookingscreen_view_divider1"
+        android:background="@color/white"
+        android:layout_below="@+id/bookingscreen_linear_head"
+        android:layout_alignRight="@+id/bookingscreen_imageview_social"
+        android:layout_alignEnd="@+id/bookingscreen_imageview_social"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/blue_dark"
+        android:layout_below="@+id/bookingscreen_view_divider1"
+        android:id="@+id/bookingscreen_relative_headimage">
+
+        <ImageView
+            android:contentDescription="@string/content_description_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/bookingscreen_image_headimage"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/linearLayout2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookingscreen_textview_eventname"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:layout_marginBottom="2dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="2dp">
+
+                <ImageView
+                    android:contentDescription="@string/content_description_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/bookingscreen_image_location"
+                    android:src="@drawable/icon_location"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_locationname"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="2dp">
+
+                <ImageView
+                    android:contentDescription="@string/content_description_image"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/bookingscreen_image_calendar"
+                    android:src="@drawable/icon_calendar"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_calendar"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#60000000"></View>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearLayout2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookingscreen_textview_headtime"
+                android:textColor="@color/white"
+                android:gravity="center|bottom"
+                android:textSize="40sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookingscreen_textview_headtime_time"
+                android:textColor="@color/white"
+                android:gravity="center|top"
+                android:textSize="40sp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:id="@+id/bookingscreen_relative_confirm"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/bookingscreen_imageview_social"
+        android:layout_alignEnd="@+id/bookingscreen_imageview_social">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="CONFIRM"
+            android:id="@+id/bookingscreen_textview_confirm"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/style_gradientcolor_profile"
+            android:layout_centerInParent="true"
+            android:gravity="center" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/bookingscreen_relative_headimage"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/bookingscreen_relative_confirm">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/pink1"
+                android:id="@+id/bookingscreen_linear_pickdate">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="Pick a date"
+                    android:id="@+id/bookingscreen_textview_pickdate"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookingscreen_linear_pickdate"
+                android:layout_centerHorizontal="true"
+                android:background="#ff355d"
+                android:id="@+id/bookingscreen_linear_dates"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_day1"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:textColor="#d12b54"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_day2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:textColor="#d12b54"
+                    android:ellipsize="end"
+                    android:maxLines="3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_day3"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:textColor="#d12b54"
+                    android:ellipsize="end"
+                    android:maxLines="3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_day4"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:textColor="#d12b54"
+                    android:ellipsize="end"
+                    android:maxLines="3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_day5"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:textColor="#d12b54"
+                    android:ellipsize="end"
+                    android:maxLines="3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_day6"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:textColor="#d12b54"
+                    android:ellipsize="end"
+                    android:maxLines="3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bookingscreen_textview_day7"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="19sp"
+                    android:textColor="#d12b54"
+                    android:ellipsize="end"
+                    android:maxLines="3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/bookingscreen_linear_dates"
+                android:layout_centerHorizontal="true"
+                android:background="@color/pink1"
+                android:id="@+id/bookingscreen_linear_picksession">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="Pick a session"
+                    android:id="@+id/bookingscreen_textview_picksession"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookingscreen_linear_picksession"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/pink2"
+                    android:id="@+id/bookingscreen_linear_sessions"
+
+                    android:gravity="center"></LinearLayout>
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

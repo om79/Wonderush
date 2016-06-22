@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.programize.wonderush.Activities.Settings.Billing2"
+    >
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/head_pink"
+        android:id="@+id/billing2screen_linear_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/billing2screen_textview_head"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:contentDescription="@string/content_description_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/billing2screen_imageview_backarrow"
+            android:src="@drawable/icon_arrow_back"
+            android:padding="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/billing2screen_view_divider1"
+        android:background="@android:color/white"
+        android:layout_below="@+id/billing2screen_linear_head"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/billing2screen_layout_price"
+        android:layout_below="@+id/billing2screen_view_divider1"
+        android:gravity="center"
+        android:padding="20dp"
+        android:background="@color/pink1">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/billing2screen_text_price1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:gravity="center" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/billing2screen_text_price2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/billing2screen_layout_price"
+        android:layout_above="@+id/billing2screen_text_pay"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/billing2screen_edit_1"
+                android:layout_gravity="center_horizontal"
+                android:hint="Card Number"
+                android:textColorHint="@android:color/black"
+                android:inputType="number"
+                android:maxLength="16"
+                android:layout_weight="2"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/style_rectangle_edittext_new"
+                android:padding="10dp" />
+
+            <ImageView
+                android:contentDescription="@string/content_description_image"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:id="@+id/billing2screen_image_camera"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/icon_camera_scan"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/billing2screen_edit_2"
+                android:layout_gravity="center_horizontal"
+                android:hint="MM/YY"
+                android:maxLength="5"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:background="@drawable/style_rectangle_edittext_new"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="15sp"
+                android:padding="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/billing2screen_edit_4"
+                android:layout_gravity="center_horizontal"
+                android:hint="CVC"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:background="@drawable/style_rectangle_edittext_new"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="3"
+                android:layout_marginLeft="15dp"
+                android:textSize="15sp"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/billing2screen_edit_5"
+                android:layout_gravity="center_horizontal"
+                android:hint="Post Code"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:lines="1"
+                android:background="@drawable/style_rectangle_edittext_new"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:textSize="15sp"
+                android:padding="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/billing2screen_edit_3"
+                android:layout_gravity="center_horizontal"
+                android:hint="COUNTRY"
+                android:text="United Kingdom"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:background="@drawable/style_rectangle_edittext_new"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:visibility="invisible"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/billing2screen_edit_6"
+                android:layout_gravity="center_horizontal"
+                android:hint="ADD PROMO CODE"
+                android:lines="1"
+                android:gravity="center"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:background="@drawable/style_rectangle_edittext_new"
+                android:textSize="15sp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="APPLY"
+                android:id="@+id/billing2screen_text_apply"
+                android:background="@color/pink3"
+                android:textColor="@color/white"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/billing2screen_text_coupon_details"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/billing2screen_text_coupon_details2"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Powered by Stripe"
+            android:id="@+id/billing2screen_text_stripe"
+            android:gravity="center_horizontal|bottom"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:id="@+id/billing2screen_text_pay"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@color/head_pink"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:text="CONFIRM" />
+</RelativeLayout>
